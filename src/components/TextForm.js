@@ -24,6 +24,7 @@ export default function TextForm(props) {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(text);
+    document.getSelection().removeAllRanges();
     props.showAlert("Copied to clipboard!", "success");
   };
 
@@ -55,20 +56,37 @@ export default function TextForm(props) {
             color: props.mode === "dark" ? "white" : "black",
           }}
         ></textarea>
-        <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-2 "
+          onClick={handleUpClick}
+        >
           Convert to uppercase
         </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={handleLowClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-2 "
+          onClick={handleLowClick}
+        >
           Convert to lowercase
         </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={textto0}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-2 "
+          onClick={textto0}
+        >
           clear text
         </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-2 "
+          onClick={handleCopy}
+        >
           copy text
         </button>
         <button
-          className="btn btn-primary mx-2 my-2"
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-2 "
           onClick={handleExtraSpaces}
         >
           remove extra spaces
