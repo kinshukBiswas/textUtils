@@ -51,7 +51,7 @@ export default function TextForm(props) {
           id="myBox"
           rows="8"
           style={{
-            backgroundColor: props.mode === "light" ? "white" : "grey",
+            backgroundColor: props.mode === "light" ? "#1b3f81" : "grey",
             color: props.mode === "dark" ? "white" : "black",
           }}
         ></textarea>
