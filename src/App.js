@@ -1,10 +1,8 @@
 import "./App.css";
 import { useState } from "react";
-// import About from "./components/About";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const header = "Enter text here";
@@ -45,12 +43,7 @@ function App() {
       <Navbar title="TextUtils" toggleMode={toggleMode} mode={mode} />
       <Alert alert={alert} />
       <div className="container my-3">
-        {/* <Router> */}
-        {/* <Routes> */}
-        {/* <About mode={mode} /> */}
         <TextForm showAlert={showAlert} heading={header} mode={mode} />
-        {/* </Routes> */}
-        {/* </Router> */}
       </div>
     </>
   );

@@ -8,7 +8,7 @@ export default function Navbar(props) {
       data-bs-theme={`${props.mode}`}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#" target="_self_">
+        <a className="navbar-brand" href="#">
           {props.title}
         </a>
         <button
